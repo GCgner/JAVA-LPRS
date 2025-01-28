@@ -1,15 +1,20 @@
 package com.example.lprs;
-import javafx.application.Application;
-import javafx.stage.Stage;
 
-public class AcceuilController extends Application {
+import java.net.URL;
+import java.util.ResourceBundle;
+import javafx.fxml.FXML;
 
-    public static void main(String[] args) {
-        launch(args);
+public class AcceuilController {
+
+    @FXML
+    private ResourceBundle resources;
+
+    @FXML
+    private URL location;
+
+    @FXML
+    void initialize() {
+
     }
 
-    @Override
-    public void start(Stage primaryStage) {
-        
-    }
 }

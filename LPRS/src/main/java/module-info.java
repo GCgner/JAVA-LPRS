@@ -8,7 +8,10 @@ module com.example.lprs {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
+    requires java.sql;
 
     opens com.example.lprs to javafx.fxml;
     exports com.example.lprs;
+    exports com.example.lprs.formulaire;
+    opens com.example.lprs.formulaire to javafx.fxml;
 }

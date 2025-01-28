@@ -1,4 +1,4 @@
-package appli.Database;
+package com.example.lprs.BDD;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -6,22 +6,20 @@ import java.sql.SQLException;
 
 public class Database {
 
-    private String serveur = "localhost";
-    private String nomDeLaBase = "javafx";
-    private String utilisateur = "root";
-    private String motDePasse = "";
+    public Connection bdd;
 
-    private String getUrl() {
-        return "jdbc:mysql://" + serveur + "/" + nomDeLaBase + "?serverTimezone=UTC";
-    }
+    public Connection getBdd() {
+        String bddNom = "javalprs";
+        String user ="root";
+        String usermdp ="";
+        String url ="jdbc:mysql://localhost:3306/" + bddNom;
 
-    public Connection getConnexion() {
-        Connection connection = null;
         try {
-            connection = DriverManager.getConnection(getUrl(), utilisateur, motDePasse);
+            bdd = DriverManager.getConnection(url,user,usermdp);
         } catch (SQLException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
-        return connection;
+
+        return bdd;
     }
 }

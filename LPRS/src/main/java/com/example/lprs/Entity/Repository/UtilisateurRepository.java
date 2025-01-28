@@ -1,7 +1,7 @@
-package appli.model.repository;
+package com.example.lprs.Entity.Repository;
 
-import appli.Database.Database;
-import appli.model.Utilisateur;
+import com.example.lprs.BDD.Database;
+import com.example.lprs.Entity.Utilisateur;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -10,16 +10,20 @@ import java.sql.SQLException;
 
 public class UtilisateurRepository {
 
+    private final Connection bdd;
+
+    public UtilisateurRepository() {
+        this.bdd = new Database().getBdd();
+    }
+
     public boolean inscription(Utilisateur utilisateur) {
-        // Check if the email already exists
         if (getUtilisateurByEmail(utilisateur.getEmail()) != null) {
             System.out.println("Email déjà existent !");
             return false;
         }
 
         String query = "INSERT INTO Utilisateur (nom, prenom, email, mdp) VALUES (?, ?, ?, ?)";
-        try (Connection connection = new Database().getConnexion();
-             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+        try (PreparedStatement preparedStatement = bdd.prepareStatement(query)) {
             preparedStatement.setString(1, utilisateur.getNom());
             preparedStatement.setString(2, utilisateur.getPrenom());
             preparedStatement.setString(3, utilisateur.getEmail());
@@ -36,14 +40,13 @@ public class UtilisateurRepository {
         Utilisateur utilisateur = null;
         String query = "SELECT * FROM Utilisateur WHERE email = ?";
 
-        try (Connection connection = new Database().getConnexion();
-             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+        try (PreparedStatement preparedStatement = bdd.prepareStatement(query)) {
             preparedStatement.setString(1, email);
             ResultSet resultSet = preparedStatement.executeQuery();
 
             if (resultSet.next()) {
                 utilisateur = new Utilisateur();
-                utilisateur.setId(resultSet.getInt("id_utilisateur"));
+                utilisateur.setId_utilisateur(resultSet.getInt("id_utilisateur"));
                 utilisateur.setNom(resultSet.getString("nom"));
                 utilisateur.setPrenom(resultSet.getString("prenom"));
                 utilisateur.setEmail(resultSet.getString("email"));
@@ -58,14 +61,13 @@ public class UtilisateurRepository {
 
     public Utilisateur connexion(String email, String mdp) {
         String query = "SELECT * FROM Utilisateur WHERE email = ? AND mdp = ?";
-        try (Connection connection = new Database().getConnexion();
-             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+        try (PreparedStatement preparedStatement = bdd.prepareStatement(query)) {
             preparedStatement.setString(1, email);
             preparedStatement.setString(2, mdp);
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
                 Utilisateur utilisateur = new Utilisateur();
-                utilisateur.setId(resultSet.getInt("id"));
+                utilisateur.setId_utilisateur(resultSet.getInt("id"));
                 utilisateur.setNom(resultSet.getString("nom"));
                 utilisateur.setPrenom(resultSet.getString("prenom"));
                 utilisateur.setEmail(resultSet.getString("email"));

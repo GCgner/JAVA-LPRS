@@ -1,7 +1,9 @@
-package appli.accueil;
+package com.example.lprs.formulaire;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import com.example.lprs.HelloApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -37,6 +39,7 @@ public class LoginController {
 
     @FXML
     void OnActionInscription(ActionEvent event) {
+        HelloApplication.changeScene("inscriptionView","Inscription");
 
     }
 

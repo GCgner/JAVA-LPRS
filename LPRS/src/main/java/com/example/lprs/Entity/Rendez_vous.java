@@ -1,4 +1,10 @@
-public class rendre_vous {
+package com.example.lprs.Entity;
+
+import java.sql.Time;
+import java.util.Date;
+
+
+public class Rendez_vous {
 
     private int id_rendez_vous;
     private Date date_rdv;
@@ -7,10 +13,10 @@ public class rendre_vous {
     private Integer ref_utilisateur;
     private Integer ref_dossier_inscription;
 
-    public rendre_vous() {
+    public Rendez_vous() {
     }
 
-    public rendre_vous(int id_rendez_vous, Date date_rdv, Time heure_rdv, String salle, Integer ref_utilisateur, Integer ref_dossier_inscription) {
+    public Rendez_vous(int id_rendez_vous, Date date_rdv, Time heure_rdv, String salle, Integer ref_utilisateur, Integer ref_dossier_inscription) {
         this.id_rendez_vous = id_rendez_vous;
         this.date_rdv = date_rdv;
         this.heure_rdv = heure_rdv;

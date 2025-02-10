@@ -1,4 +1,7 @@
 package com.example.lprs.Entity;
+
+import java.util.Date;
+
 public class Bon_commande {
 
     private int id_bon_commande;

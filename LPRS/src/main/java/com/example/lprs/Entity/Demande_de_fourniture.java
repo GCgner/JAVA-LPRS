@@ -1,4 +1,6 @@
-public class DemandeDeFourniture {
+package com.example.lprs.Entity;
+
+public class Demande_de_fourniture {
     private int idDemande;
     private int quantite;
     private String raison;
@@ -7,9 +9,9 @@ public class DemandeDeFourniture {
     private Integer refUtilisateur;
     private Integer refFourniture;
 
-    public DemandeDeFourniture() {}
+    public Demande_de_fourniture() {}
 
-    public DemandeDeFourniture(int idDemande, int quantite, String raison, String statut, String justificationRefus, Integer refUtilisateur, Integer refFourniture) {
+    public Demande_de_fourniture(int idDemande, int quantite, String raison, String statut, String justificationRefus, Integer refUtilisateur, Integer refFourniture) {
         this.idDemande = idDemande;
         this.quantite = quantite;
         this.raison = raison;

@@ -1,0 +1,139 @@
+/* Thème clair, moderne et épuré */
+
+.root {
+    -fx-background-color: #F7F9FC; /* Blanc cassé lumineux */
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+.side_ankerpane {
+    -fx-background-color: #DCE3E9; /* Gris très clair */
+    -fx-border-color: #A8B3BC; /* Gris doux */
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+}
+
+.inner-pane {
+    -fx-background-color: #FFFFFF; /* Blanc pur */
+    -fx-border-color: #A8B3BC;
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 2);
+}
+
+.menu_kebab {
+    -fx-background-color: #A3D9A5; /* Vert pastel */
+    -fx-border-color: #8BCF92;
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+}
+
+.btn_home {
+    -fx-background-color: #56C596; /* Vert dynamique */
+    -fx-text-fill: #FFFFFF;
+    -fx-border-radius: 12px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 3, 0, 0, 1);
+}
+
+.btn_menu_bar {
+    -fx-background-color: #DCE3E9;
+    -fx-text-fill: #3E4B5B;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-border-color: transparent;
+}
+
+.menu-text-blanc {
+    -fx-text-fill: #3E4B5B;
+}
+
+.txt_search {
+    -fx-background-color: transparent;
+    -fx-border-color: #B0B0B0;
+    -fx-border-width: 0 0 2px 0;
+    -fx-font-size: 14px;
+    -fx-text-fill: #3E4B5B;
+    -fx-prompt-text-fill: #A8B3BC;
+}
+
+.btn_parametre {
+    -fx-background-color: transparent;
+}
+
+.panel_l, .panel_ll, .panel_lll, .panel_llll {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #A8B3BC;
+    -fx-border-width: 1px;
+    -fx-border-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 5, 0, 0, 2);
+}
+
+.lbl {
+    -fx-text-fill: #5A626D;
+    -fx-font-weight: normal;
+}
+
+.label_dossierr_finsih {
+    -fx-text-fill: #56C596;
+    -fx-font-weight: bold;
+}
+
+.progress_bar {
+    -fx-background-color: #56C596;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+}
+
+.panel_rdv, .panel_rdv2 {
+    -fx-background-color: #DCE3E9;
+    -fx-border-color: #A8B3BC;
+    -fx-border-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 5, 0, 0, 2);
+}
+/* Styles des Pane */
+.pane {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #D1D1D1;
+    -fx-border-width: 1px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-padding: 15px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.1), 8, 0, 0, 4);
+}
+
+.test {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #D1D1D1;
+    -fx-border-width: 1px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-padding: 15px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.1), 8, 0, 0, 4);
+}
+
+.panel_rdv {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #D1D1D1;
+    -fx-border-width: 1px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-padding: 15px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.1), 8, 0, 0, 4);
+}
+
+/* Application des classes */
+#yacine {
+    -fx-background-color: #F8F9FD;
+    -fx-border-color: #5C85FF;
+    -fx-border-width: 2px;
+    -fx-border-radius: 20px;
+    -fx-padding: 18px;
+}
+
+#yacine, #rdv, #test {
+    -fx-background-color: #F8F9FD;
+    -fx-border-color: #5C85FF;
+    -fx-border-width: 2px;
+    -fx-border-radius: 20px;
+    -fx-padding: 18px;
+}

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.TextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="602.0" prefWidth="861.0" styleClass="root" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lprs.Controller.HomeController.AcceuilController">
+    <children>
+        <VBox prefHeight="602.0" prefWidth="199.0">
+            <children>
+                <AnchorPane fx:id="c" prefHeight="602.0" prefWidth="248.0" styleClass="side_ankerpane" stylesheets="@../css/styles.css">
+                    <children>
+                        <Pane fx:id="inner_pane" layoutX="13.0" layoutY="14.0" prefHeight="64.0" prefWidth="176.0" styleClass="inner-pane" stylesheets="@../css/styles.css">
+                            <children>
+                                <ImageView fitHeight="55.0" fitWidth="53.0" layoutX="14.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../assets/medias/download.png" />
+                                    </image>
+                                </ImageView>
+                            </children></Pane>
+                        <Button fx:id="btn_home" layoutX="7.0" layoutY="102.0" mnemonicParsing="false" onAction="#changePageSceneHome" prefHeight="45.0" prefWidth="182.0" styleClass="btn_home" stylesheets="@../css/styles.css" text="ACADEMIA" textFill="#1b47d1">
+                            <font>
+                                <Font name="Helvetica Bold" size="13.0" />
+                            </font>
+                        </Button>
+                        <MenuBar layoutX="22.0" layoutY="307.0" prefHeight="45.0" prefWidth="165.0" style="-fx-background-color: transparent;" styleClass="btn_menu_bar" stylesheets="@../css/styles.css">
+                            <menus>
+                                <Menu id="btn_menu_bar" fx:id="btn_menu_bar" mnemonicParsing="false" style="-fx-text-fill: transparent;" styleClass="btn_menu_bar" text="Étudiants">
+                                    <items>
+                                        <MenuItem mnemonicParsing="false" onAction="#changePageSceneAddStudent" text="Créer un étudiant" />
+                                        <MenuItem mnemonicParsing="false" onAction="#changePageSceneDossierInscription" text="Dossiers d'inscription" />
+                                        <MenuItem mnemonicParsing="false" onAction="#changePageSceneFichesEtudiantes" text="Fiches étudiantes" />
+
+                                    </items>
+                                    <graphic>
+                                        <ImageView fitHeight="34.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../assets/medias/etudiant-diplome.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Menu>
+                            </menus>
+                            <effect>
+                                <Blend />
+                            </effect>
+                        </MenuBar>
+                        <MenuBar fx:id="btn_menu_bar1" layoutX="4.0" layoutY="163.0" prefHeight="45.0" prefWidth="187.0" styleClass="btn_menu_bar" stylesheets="@../css/styles.css">
+                            <menus>
+                                <Menu mnemonicParsing="false" text="Rendez-vous">
+                                    <items>
+                                        <MenuItem mnemonicParsing="false" text="Ajouter un rendez-vous" />
+                                        <MenuItem mnemonicParsing="false" text="Calendrier" />
+                                    </items>
+                                    <graphic>
+                                        <ImageView fitHeight="34.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../assets/medias/cartes.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Menu>
+                            </menus>
+                            <effect>
+                                <Blend />
+                            </effect>
+                        </MenuBar>
+                        <MenuBar fx:id="btn_menu_bar2" layoutX="11.0" layoutY="209.0" prefHeight="45.0" prefWidth="176.0" styleClass="btn_menu_bar" stylesheets="@../css/styles.css">
+                            <menus>
+                                <Menu mnemonicParsing="false" style="-fx-text-fill: #FFFFFF;" styleClass="-fx-text-fill: #FFFFFF;" text="Fournitures">
+                                    <items>
+                                        <MenuItem mnemonicParsing="false" text="Demander des fournitures" />
+                                        <MenuItem mnemonicParsing="false" text="Gestion des stocks" />
+                                    </items>
+                                    <graphic>
+                                        <ImageView fitHeight="34.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../assets/medias/papeterie.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Menu>
+                            </menus>
+                            <effect>
+                                <Blend />
+                            </effect>
+                        </MenuBar>
+                        <MenuBar fx:id="btn_menu_bar21" layoutX="16.0" layoutY="260.0" prefHeight="45.0" prefWidth="165.0" styleClass="btn_menu_bar" stylesheets="@../css/styles.css">
+                            <menus>
+                                <Menu mnemonicParsing="false" style="-fx-text-fill: #FFFFFF;" styleClass="-fx-text-fill: #FFFFFF;" text="Historique">
+                                    <items>
+                                        <MenuItem mnemonicParsing="false" text="Historique" />
+                                        <MenuItem mnemonicParsing="false" text="Journal des connexions" />
+                                    </items>
+                                    <graphic>
+                                        <ImageView fitHeight="34.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../assets/medias/historique-des-commandes.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Menu>
+                            </menus>
+                            <effect>
+                                <Blend />
+                            </effect>
+                        </MenuBar>
+                        <Button fx:id="btn_home1" layoutX="16.0" layoutY="410.0" mnemonicParsing="false" onAction="#logout" prefHeight="42.0" prefWidth="155.0" styleClass="btn_home" stylesheets="@../css/styles.css" text="Deconnexion" textFill="#1b47d1">
+                            <font>
+                                <Font name="Helvetica Bold" size="13.0" />
+                            </font>
+                        </Button>
+                          <ImageView fitHeight="25.0" fitWidth="24.0" layoutX="22.0" layoutY="420.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                  <Image url="@../assets/medias/connexion.png" />
+                              </image>
+                          </ImageView>
+                  <Button layoutX="16.0" layoutY="353.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="131.0" text="Panel Admin">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/medias/administrateur.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                    </children>
+                    <effect>
+                        <Glow />
+                    </effect></AnchorPane>
+            </children>
+        </VBox>
+        <Pane prefHeight="602.0" prefWidth="664.0">
+            <children>
+                <Pane layoutX="-1.0" layoutY="8.0" prefHeight="55.0" prefWidth="664.0">
+                    <children>
+                        <TextField fx:id="txt_search" blendMode="DARKEN" cache="true" depthTest="ENABLE" focusTraversable="false" layoutX="374.0" layoutY="6.0" promptText="Rechercher..." styleClass="txt_search" stylesheets="@../css/styles.css">
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                            <effect>
+                                <DropShadow />
+                            </effect></TextField>
+                        <Button alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="540.0" layoutY="12.0" mnemonicParsing="false" styleClass="btn_parametre" stylesheets="@../css/styles.css" text="Button" textFill="WHITE" />
+                        <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="604.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../assets/medias/profil-de-lutilisateur.png" />
+                            </image>
+                        </ImageView>
+                        <Button alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="594.0" layoutY="2.0" minWidth="53.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="53.0" styleClass="btn_parametre" stylesheets="@../css/styles.css" text="Button" textFill="WHITE" />
+                        <Label layoutX="86.0" layoutY="10.0" prefHeight="36.0" prefWidth="113.0" text="Academia">
+                            <font>
+                                <Font name="Avenir Black Oblique" size="25.0" />
+                            </font></Label>
+                        <ImageView fitHeight="46.0" fitWidth="45.0" layoutX="24.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../assets/medias/download.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </Pane>
+            <Pane fx:id="yacine" layoutX="42.0" layoutY="67.0" prefHeight="278.0" prefWidth="517.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="64.0" prefWidth="120.0" />
+                  <Label layoutX="14.0" prefHeight="53.0" prefWidth="81.0" text="Fournitures" />
+                  <ImageView fitHeight="200.0" fitWidth="378.0" layoutX="66.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/medias/paper-en.png" />
+                     </image>
+                  </ImageView>
+                  <Separator layoutX="14.0" layoutY="41.0" prefHeight="0.0" prefWidth="429.0" />
+               </children></Pane>
+            <Pane id="rdv" fx:id="rdv" layoutX="50.0" layoutY="381.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Button layoutX="3.0" layoutY="2.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="113.0" />
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="18.0" prefWidth="157.0" text="RENDEZ-VOUS" />
+                  <ImageView fitHeight="119.0" fitWidth="200.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/medias/calendrier-2025-4-1-677698b1ccf0d081298759.png" />
+                     </image>
+                  </ImageView>
+                  <Separator layoutY="39.0" prefWidth="200.0" />
+               </children></Pane>
+            <Pane id="test" fx:id="test" layoutX="274.0" layoutY="381.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@../css/styles.css">
+               <children>
+                  <Button layoutX="-2.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="113.0" />
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="18.0" prefWidth="81.0" text="DOSSIER" />
+                  <ImageView fitHeight="128.0" fitWidth="149.0" layoutX="14.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/medias/fichier-et-dossier.png" />
+                     </image>
+                  </ImageView>
+                  <Separator layoutX="-5.0" layoutY="32.0" prefHeight="24.0" prefWidth="200.0" />
+               </children></Pane>
+            </children>
+        </Pane>
+      <Label text="Label" />
+      <Separator prefWidth="200.0" />
+    </children>
+</HBox>

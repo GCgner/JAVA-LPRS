@@ -1,3 +1,5 @@
+package com.example.lprs.Entity;
+
 public class Fournisseur {
     private int idFournisseur;
     private String contact;
